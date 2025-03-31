@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bunnydoro</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>bunny time</h1>
+        <select id="timeSelect">
+            <option value="300">5 min</option>
+            <option value="900">15 min</option>
+            <option value="1500">25 min</option>
+            <option value="1800">30 min</option>
+            <option value="3600">60 min</option>
+        </select>
+        <div id="timer">00:00</div>
+        <button id="startButton" onclick="startTimer()">Start</button>
+        <button id="pauseButton" onclick="pauseTimer()">Pause</button>
+        <button id="resetButton" onclick="resetTimer()">Reset</button>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
+
