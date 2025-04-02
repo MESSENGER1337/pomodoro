@@ -38,7 +38,7 @@ select, button {
     text-align: center;
     width: 100px;
     height: 40px;
-    margin: 10px;
+    margin: 10px 5px 5px 5px;
     border: none;
     border-radius: 10px;
     box-shadow: inset 4px 4px 8px #e0c3cb, inset -4px -4px 8px #ffffff;
