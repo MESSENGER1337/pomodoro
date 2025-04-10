@@ -6,7 +6,7 @@ let isChronometer = false;
 function startTimer() {
     if (!isPaused) {  // Only reset if not resuming
         const selectedValue = document.getElementById("timeSelect").value;
-        
+
         if (selectedValue === "timer") {
             isChronometer = true;
             timeLeft = 0; // Always reset chronometer to zero on start
@@ -31,9 +31,11 @@ function startTimer() {
     }
 
     updateDisplay();
+
     countdown = setInterval(() => {
         if (!isChronometer && timeLeft <= 0) {
             clearInterval(countdown);
+            document.getElementById("alarmSound").play(); // 🔊 Play alarm sound!
             alert("Time's up!");
             resetTimer();
         } else {
@@ -41,6 +43,7 @@ function startTimer() {
             updateDisplay();
         }
     }, 1000);
+
     isPaused = false;
 }
 
@@ -62,11 +65,12 @@ function resetTimer() {
         document.getElementById("timer").textContent = "00:00"; // Ensure reset to zero
     } else {
         timeLeft = parseInt(document.getElementById("timeSelect").value);
+        document.getElementById("timer").textContent = "00:00"; // Reset display for all
     }
 
-    document.getElementById("timer").textContent = "00:00";
     isPaused = false;
 }
+
 
 
 
